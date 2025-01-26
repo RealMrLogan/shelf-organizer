@@ -23,12 +23,12 @@ def filter_files_by_type(files, extensions):
     return [file for file in files if any(file.endswith(ext) for ext in extensions)]
 
 
-def organize(dir, author_style, title_style):
+def organize(dir, title_style):
     files = list_all_files(dir)
 
     # only filter for m4b files for now
     filtered_files = filter_files_by_type(files, ['m4b'])
 
     for file in filtered_files:
-        book1 = Book(read_m4b_metadata(file), author_style, title_style)
+        book1 = Book(read_m4b_metadata(file), title_style)
         print(book1)

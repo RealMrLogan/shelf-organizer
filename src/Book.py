@@ -14,8 +14,7 @@ def get_specific_metadata(metadata, tag_name):
         return None
 
 class Book:
-    def __init__(self, data, author_style, title_style):
-        self.author_style = author_style
+    def __init__(self, data, title_style):
         self.title_style = title_style
 
         self.author = get_specific_metadata(data, metadata_tags['artist'])

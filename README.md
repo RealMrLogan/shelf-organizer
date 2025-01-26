@@ -9,3 +9,9 @@ A script to organize a directory so that Audiobookshelf can parse it effectively
 ```bash
 poetry install
 ```
+
+## Run
+
+```bash
+python3 src/main.py
+```
