@@ -1,0 +1,10 @@
+[tool.poetry]
+name = "shelf-organizer"
+version = "0.1.0"
+description = 'A script to organize a directory so that Audiobookshelf can parse it effectively.'
+authors = ['RealMrLogan']
+
+[tool.poetry.dependencies]
+python = "^3.10"
+mutagen = "^1.47"
+InquirerPy = "0.3.4"
