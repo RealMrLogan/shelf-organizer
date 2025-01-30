@@ -53,6 +53,7 @@ def main():
     ]
     confirmation = prompt(confirm_question)
     if (confirmation["confirm"]):
+        print('\n')
         organize(dir, is_dry_run)
 
 

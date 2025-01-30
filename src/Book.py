@@ -35,14 +35,14 @@ class Book:
     # TODO: and if it is, what number is it
 
     def move_file(self, dir):
-        # build path
-        relative_destination_file_path = os.path.join(self.author, self.album, self.title)
-        absolute_destination_path = os.path.join(dir, relative_destination_file_path)
-        os.makedirs(absolute_destination_path)
-
-        # destination_file = os.path.join(path, os.path.basename(path))
-        shutil.move(self.path, absolute_destination_path)
-        print('successfully moved:', self.name)
+        relative_destination_path = os.path.join(self.author, self.album, self.title)
+        absolute_destination_path = os.path.join(dir, relative_destination_path)
+        try:
+            os.makedirs(absolute_destination_path)
+            shutil.move(self.path, absolute_destination_path)
+            print('Successfully moved:', self.name)
+        except Exception as e:
+            print(e)
 
 
 
