@@ -31,6 +31,9 @@ class Book:
     def get_path(self):
         return f"{self.author} > {self.album} > {self.title} > {self.name}"
     
+    # TODO: figure out if the book is in a series
+    # TODO: and if it is, what number is it
+
     def move_file(self, dir):
         # build path
         relative_destination_file_path = os.path.join(self.author, self.album, self.title)
